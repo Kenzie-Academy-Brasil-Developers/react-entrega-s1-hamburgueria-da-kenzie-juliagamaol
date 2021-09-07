@@ -1,0 +1,56 @@
+body {
+  background: rgb(7, 7, 32);
+}
+.App {
+  text-align: center;
+}
+.App-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.Produtos{
+  border: 1px solid orange;
+  border-radius: 10px;
+  background: white;
+  color: black;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  width: 20%;
+}
+.Qualquer{
+  display: flex;
+  flex-wrap: wrap;
+}
+h1{
+  color: white;
+}
+h3{
+  margin: 0;
+  background: orange;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.btn{
+  margin-top: 160px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  height: 80px;
+  background: orange;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+span{
+  color: white;
+}
+
+.preco{
+  color: black;
+}
+
