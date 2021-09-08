@@ -13,7 +13,6 @@ function App() {
     { id: 7, name: 'Fanta', category: 'Bebidas', price: 4.99 },
   ]); 
 
-  const [filteredProducts, setFilteredProducts] = useState([]);
 
   const [currentSale, setCurrentSale] = useState([])
   
@@ -29,9 +28,10 @@ function App() {
           if(product.id === productId){
             if(!currentSale.includes(product)){
               arr.push(product.price)
-              console.log(arr)
-              setCurrentSale([...currentSale, product])
-              console.log(currentSale)
+              
+              setCurrentSale([...currentSale,product])
+              
+              
             }
           }
       })
