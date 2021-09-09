@@ -3,11 +3,14 @@ body {
 }
 .App {
   text-align: center;
+  
 }
 .App-header {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: space-evenly;
+  min-width: 220px;
 }
 
 .Produtos{
@@ -20,11 +23,13 @@ body {
   flex-direction: column;
   margin-right: 20px;
   margin-bottom: 20px;
-  width: 20%;
 }
 .Qualquer{
   display: flex;
   flex-wrap: wrap;
+  padding: 5px;
+  margin-right: 50px;
+  margin-left: 50px;
 }
 h1{
   color: white;
@@ -46,11 +51,42 @@ h3{
   cursor: pointer;
 }
 
-span{
-  color: white;
-}
-
 .preco{
   color: black;
 }
 
+.subtotal{
+  color: white;
+  margin-right: 150px;
+  position: absolute;
+  top: 0;
+  left: 40%;
+  margin-top: 5px;
+}
+.voltar, .pesquisar{
+  padding: 10px;
+  border: 1px solid transparent;
+  background-color: orange;
+  color: white;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.voltar{
+  margin-right: 30px
+}
+.input{
+  padding: 10px;
+  border: 1px solid transparent;
+  outline: none;
+}
+.pesquisar{
+  margin-left: 30px
+}
+
+@media (min-width:769px){
+  .subtotal{
+    position: relative;
+    left: 50%;
+  }
+}

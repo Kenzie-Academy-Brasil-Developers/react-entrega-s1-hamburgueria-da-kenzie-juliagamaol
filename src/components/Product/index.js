@@ -1,5 +1,4 @@
 const Product = (props) => {
-   
    const{product:{name,category, price}, handleClick,produto} = props
    
     return(
@@ -7,7 +6,6 @@ const Product = (props) => {
             <h3>{name}</h3>
             <p>Categoria: {category}</p>
             <span className="preco">Preço: {price}</span>
-
             <button className="btn" onClick={()=>handleClick(produto.id)}>Adicionar</button>
         </div>
     )
