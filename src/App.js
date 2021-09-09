@@ -1,7 +1,6 @@
 import './App.css';
 import {useState} from 'react'
 import MenuContainer from './components/MenuContainer';
-// import hamburguer from './images/hamburguer'
 let arr = []
 function App() {
   const [products, setProducts] = useState([
@@ -19,8 +18,7 @@ function App() {
   
   const[valorInput, setValorInput] = useState('')
   const showProducts = () =>{
-      setProducts(products.filter(products=>products.name.toLowerCase() === valorInput))
-      setValorInput('')
+      setProducts(products.filter(products=>products.name.toLowerCase() === valorInput.toLowerCase()))
   }
 
   
@@ -49,6 +47,7 @@ function App() {
       { id: 6, name: 'Coca', category: 'Bebidas', price: 4.99 },
       { id: 7, name: 'Fanta', category: 'Bebidas', price: 4.99 },
     ])
+    document.getElementById('Input').value = ''
   }
 
   return (
@@ -56,7 +55,7 @@ function App() {
       <div className="input">
       <button onClick={voltar} className="voltar">Voltar</button>
         <input type="text" onChange={(event)=>setValorInput(event.target.value)}
-        className="input" placeholder="Seu pedido"/>
+        className="input" placeholder="Seu pedido" id="Input"/>
         <button onClick={showProducts} className="pesquisar">Pesquisar</button>
       </div>
       <h1>Hamburgueria</h1>
@@ -73,7 +72,6 @@ function App() {
               <div className="Produtos">
                 <h3>{item.name}</h3>
                 <p>Categoria: {item.category}</p>
-                {/* <img src={hamburguer} alt="" /> */}
                 <span className="preco">Preço: {item.price}</span>
 
               </div>
